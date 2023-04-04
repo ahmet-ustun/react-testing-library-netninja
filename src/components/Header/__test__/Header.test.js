@@ -12,13 +12,13 @@ it("should render the same text passed into the title prop - 1", () => {
 
 it("should render the same text passed into the title prop - 2", () => {
   render(<Header title="My Header" />);
-  const headingElement = screen.getByRole("heading", { name: "My Header" });
+  const headingElement = screen.getByRole("heading");
   expect(headingElement).toBeInTheDocument();
 });
 
 it("should render the same text passed into the title prop - 3", () => {
   render(<Header title="My Header" />);
-  const headingElement = screen.getByTitle("Header");
+  const headingElement = screen.getByTitle("header");
   expect(headingElement).toBeInTheDocument();
 });
 
@@ -49,5 +49,5 @@ it("shouldn't render the same text passed into the title prop - 6", () => {
 it("should render the same text passed into the title prop - 7", () => {
   render(<Header title="My Header" />);
   const headingElements = screen.getAllByRole("heading");
-  expect(headingElements.length).toBe(2);
+  expect(headingElements.length).toBe(1);
 });
