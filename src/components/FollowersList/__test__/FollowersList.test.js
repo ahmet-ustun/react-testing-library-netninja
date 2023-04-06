@@ -12,6 +12,18 @@ const MockedFollowersList = () => {
 };
 
 describe("FollowersList", () => {
+  beforeAll(() => {
+    console.log("This line is printed before all blocks once.")
+  });
+  beforeEach(() => {
+    console.log("This line is printed before each test block.")
+  });
+  afterAll(() => {
+    console.log("This line is printed after all blocks once.")
+  });
+  afterEach(() => {
+    console.log("This line is printed after each test block.")
+  });
   it("should render single follower", async () => {
     render(<MockedFollowersList />);
 
