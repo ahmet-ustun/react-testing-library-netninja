@@ -39,7 +39,7 @@ describe("Header", () => {
 
   // QUERY BY
 
-  it("shouldn't render the same text passed into the title prop - 6", () => {
+  it("should NOT render the same text passed into the title prop - 6", () => {
     render(<Header title="My Header" />);
     const headingElement = screen.queryByText(/your header/i);
     expect(headingElement).not.toBeInTheDocument();
